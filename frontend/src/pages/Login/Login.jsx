@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../FireBaseAuth/FireBaseAuth";
-import {  signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import homeimg from "../../assets/Home.jpg";
+import homeimg from "../../assets/Home.png";
 import toast from "react-hot-toast"
 
 const Login = () => {
@@ -20,16 +20,16 @@ const Login = () => {
   };
   const handleSignup = (e) => {
     e.preventDefault();
-    if ( !userSignup.email || !userSignup.password) {
+    if (!userSignup.email || !userSignup.password) {
       // alert("Enter All fields")
       return toast.error("All fields must be completed");
     } else {
-       signInWithEmailAndPassword(
+      signInWithEmailAndPassword(
         auth,
         userSignup.email,
         userSignup.password
       )
-        .then( (res) => {
+        .then((res) => {
           navigateLogin("/");
           window.location.reload();
         })
@@ -87,7 +87,7 @@ const Login = () => {
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <button onClick={handleSignup}  className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            <button onClick={handleSignup} className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
               LogIn
             </button>
             <p className="text-xs items-center text-gray-500 mt-3">

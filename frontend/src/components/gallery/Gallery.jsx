@@ -19,45 +19,43 @@ const Gallery = () => {
             </p>
           </div>
           <div className="flex flex-wrap md:-m-2 -m-1">
-            <div className="flex flex-wrap w-1/2">
-              <div className="md:p-2 p-1 w-1/2">
+            <div className="flex flex-wrap w-full">
+              <div className="md:p-2 p-1 w-1/3">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center block hover:scale-75 hover:translate-x-4 hover:skew-y-3 hover:transition-duration-500"
                   src={g5}
                 />
               </div>
-              <div className="md:p-2 p-1 w-1/2">
+              <div className="md:p-2 p-1 w-1/3">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center blockhover:scale-75 hover:translate-x-4 hover:skew-y-3 hover:transition-duration-500"
                   src={g4}
                 />
               </div>
-              <div className="md:p-2 p-1 w-full">
+              <div className="md:p-2 p-1 w-1/3">
                 <img
                   alt="gallery"
                   className="w-full h-full object-cover object-center block hover:scale-75 hover:translate-x-4 hover:skew-y-3 hover:transition-duration-500"
                   src={g2}
                 />
               </div>
-            </div>
-            <div className="flex flex-wrap w-1/2">
-              <div className="md:p-2 p-1 w-full">
+              <div className="md:p-2 p-1 w-1/3">
                 <img
                   alt="gallery"
                   className="w-full h-full object-cover object-center block hover:scale-75 hover:translate-x-4 hover:skew-y-3 hover:transition-duration-500"
                   src={g3}
                 />
               </div>
-              <div className="md:p-2 p-1 w-1/2">
+              <div className="md:p-2 p-1 w-1/3">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center block hover:scale-75 hover:translate-x-4 hover:skew-y-3 hover:transition-duration-500"
                   src={g1}
                 />
               </div>
-              <div className="md:p-2 p-1 w-1/2">
+              <div className="md:p-2 p-1 w-1/3">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center block hover:scale-75 hover:translate-x-4 hover:skew-y-3 hover:transition-duration-500"
@@ -65,6 +63,7 @@ const Gallery = () => {
                 />
               </div>
             </div>
+
           </div>
         </div>
       </section>
