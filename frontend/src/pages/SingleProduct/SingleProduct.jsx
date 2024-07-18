@@ -13,7 +13,7 @@ const SingleProduct = ({ AddToCart }) => {
   useEffect(() => {
     const singleProductfetch = async () => {
       try {
-        const res = await axios(`http://127.0.0.1:8000/api/products/${productid}`);
+        const res = await axios(`http://127.0.0.1:8000/api/products/${productid}/`);
         setSingleProduct(res.data);
         // console.log(res.data);
       } catch (err) {

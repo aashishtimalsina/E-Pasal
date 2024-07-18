@@ -6,6 +6,9 @@ class Dimension(models.Model):
     height = models.FloatField()
     depth = models.FloatField()
 
+    def __str__(self):
+        return f"{self.width}x{self.height}x{self.depth}"
+
 class Review(models.Model):
     rating = models.IntegerField()
     comment = models.TextField()
@@ -13,11 +16,18 @@ class Review(models.Model):
     reviewerName = models.CharField(max_length=255)
     reviewerEmail = models.EmailField()
 
+    def __str__(self):
+        return self.comment
+
 class Meta(models.Model):
     createdAt = models.DateTimeField()
     updatedAt = models.DateTimeField()
     barcode = models.CharField(max_length=50)
     qrCode = models.URLField()
+
+    def __str__(self):
+        return self.barcode
+    
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
