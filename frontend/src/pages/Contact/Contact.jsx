@@ -54,7 +54,7 @@ const Contact = () => {
                 height="100%"
                 className="absolute inset-0"
                 title="map"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14133.64605638079!2d85.4377704064041!3d27.673673412322405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1710677558166!5m2!1sen!2snp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28277.69905815634!2d85.52425149999999!3d27.63342315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb0f33b1a23b53%3A0xe8ec0b92bdf38a54!2sBanepa!5e0!3m2!1sen!2snp!4v1721277236072!5m2!1sen!2snp"
               ></iframe>
               <div className="bg-white relative   flex flex-wrap py-6 rounded shadow-md">
                 <div className="lg:w-1/2 px-6">

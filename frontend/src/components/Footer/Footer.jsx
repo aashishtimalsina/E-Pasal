@@ -5,20 +5,21 @@ const Footer = () => {
     <>
       <div>
         <footer className="bg-black   text-gray-300">
-          <div className="container mx-auto py-4 px-4 flex flex-wrap justify-between">
-            <div className="mb-2 ">
-              <h2 className="text-4xl  font-semibold">
-                {" "}
-                E-<span className="text-[red]">Shop</span>
-              </h2>
-            </div>
-            <div className="flex flex-wrap items-start">
-              <div className="mr-8 mb-4">
+          <div className="container mx-auto py-4 px-4 flex flex-wrap justify-center">
+
+            <div className="flex flex-wrap place-items-start">
+              <div className="mr-10 ml-10 mb-4">
+                <h2 className="text-4xl  font-semibold">
+                  {" "}
+                  E-<span className="text-[red]">Shop</span>
+                </h2>
+              </div>
+              <div className="mr-8 ml-10 mb-4">
                 <h2 className="text-lg font-semibold mb-2">Contact</h2>
                 <p>Email: e.pasal@gmail.com</p>
                 <p>Phone: +977 9848077880</p>
               </div>
-              <div className="mr-8 mb-4">
+              <div className="mr-8 ml-10 mb-4">
                 <h2 className="text-lg font-semibold mb-2">Follow Us</h2>
                 <div className="flex space-x-4">
                   <a
@@ -55,7 +56,7 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
-              <div>
+              <div className="mr-8 ml-10 mb-4">
                 <h2 className="text-lg font-semibold mb-2">Legal</h2>
                 <div>
                   <a href="#" className="text-gray-300 hover:text-white block">

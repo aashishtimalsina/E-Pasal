@@ -24,7 +24,7 @@ const OrderDone = ({ cart }) => {
 
     try {
       const response = await axios.post(url, data);
-      console.log(response?.data?.formData);
+
       if (response?.status === 200) {
         esewaCall(response?.data?.formData);
       } else {
@@ -35,11 +35,9 @@ const OrderDone = ({ cart }) => {
     }
   };
   const esewaCall = (formData) => {
-    console.log(formData);
-    const path = "https://rc-epay.esewa.com.np/auth";
-    // const path = "https://rc-epay.esewa.com.np/api/epay/main/v2/form";
+    const path = "https://rc-epay.esewa.com.np/api/epay/main/v2/form";
     var form = document.createElement("form");
-    form.setAttribute("method", "GET");
+    form.setAttribute("method", "POST");
     form.setAttribute("action", path);
 
     for (const key in formData) {
