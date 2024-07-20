@@ -2,6 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import OrderSerializer
+import requests
 
 @api_view(['POST'])
 def create_order(request):
@@ -24,3 +25,13 @@ def create_order(request):
             return Response({"formData": formData}, status=status.HTTP_200_OK)
         return Response({"errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
     return Response({"error": "Invalid request method"}, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['POST'])
+def khalti_initiate_payment(request):
+    url = "https://a.khalti.com/api/v2/epayment/initiate/"
+    headers = {
+        "Authorization": "Key live_secret_key_68791341fdd94846a146f0457ff7b455",  # Replace with your live secret key
+        "Content-Type": "application/json",
+    }
+    response = requests.post(url, json=request.data, headers=headers)
+    return Response(response.json(), status=response.status_code)
