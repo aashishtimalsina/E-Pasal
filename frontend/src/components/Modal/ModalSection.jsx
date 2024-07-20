@@ -4,7 +4,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import OrderDone from "../Order/OrderDone";
 
-const ModalSection = ({cart}) => {
+const ModalSection = ({ cart }) => {
   const [openModal, setOpenModal] = useState(false);
   const [orderDetails, setorderDetails] = useState({
     fullName: "",
@@ -16,19 +16,19 @@ const ModalSection = ({cart}) => {
     setOpenModal(false);
     setorderDetails("");
   }
-  const handleChange =(event) =>{
+  const handleChange = (event) => {
     setorderDetails({
-         ...orderDetails,[event.target.name]:event.target.value
+      ...orderDetails, [event.target.name]: event.target.value
     });
     console.log(orderDetails)
 
-  } 
-  const handleSubmit =(event)=>{
+  }
+  const handleSubmit = (event) => {
     // event.preventDefault();
-    if(!orderDetails.fullName || !orderDetails.address || !orderDetails.mobile){
+    if (!orderDetails.fullName || !orderDetails.address || !orderDetails.mobile) {
       return toast.error("All fields must be completed")
     }
-    else{
+    else {
       toast.success("Order Completed");
       onCloseModal();
     }
@@ -45,7 +45,7 @@ const ModalSection = ({cart}) => {
         </Button>
         <Modal show={openModal} size="md" onClose={onCloseModal} popup>
           <Modal.Header />
-           <h1 className="mx-auto mb-6 text-xl">Please enter your details before paying.</h1>
+          <h1 className="mx-auto mb-6 text-xl">Please enter your details before paying.</h1>
           <Modal.Body>
             <div className="space-y-6">
               <div>
@@ -89,9 +89,7 @@ const ModalSection = ({cart}) => {
                 />
               </div>
               <div className="w-full">
-                {/* <Button onClick={handleSubmit}>Pay with Esewa</Button> */}
-                
-                 <OrderDone cart={cart} handleSubmit={handleSubmit}/>
+                <OrderDone cart={cart} handleSubmit={handleSubmit} />
               </div>
             </div>
           </Modal.Body>
